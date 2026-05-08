@@ -73,16 +73,7 @@ export default function HeroPortrait({ imageUrl = PLACEHOLDER_PORTRAIT }) {
         </div>
       </div>
 
-      {/* Floating quote chip — editorial pull */}
-      <div className="absolute -bottom-10 -left-2 md:-left-8 lg:-left-12 max-w-[300px] bg-espresso/90 backdrop-blur-md border border-cream/10 rounded-2xl px-6 py-5 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.7)]">
-        <p className="font-serif italic text-cream text-[17px] leading-[1.4]">
-          “Most disputes don’t need a courtroom — they need a{" "}
-          <span className="text-gold">bridge.</span>”
-        </p>
-        <p className="mt-3 text-[10px] tracking-[0.35em] uppercase text-sand/70">
-          TrustBridge Counsel
-        </p>
-      </div>
+      {/* Floating quote chip removed per user request */}
     </div>
   );
 }

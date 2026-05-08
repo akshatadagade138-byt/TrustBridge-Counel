@@ -2,6 +2,8 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { ArrowRight } from "lucide-react";
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
 const SUBJECTS = [
   "Couples / Relationship",
   "Corporate / Boardroom",
@@ -24,23 +26,43 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
-      toast.error("Please share your name, email, and a brief message.");
+    if (
+      !form.name.trim() ||
+      !form.email.trim() ||
+      !form.phone.trim() ||
+      !form.message.trim()
+    ) {
+      toast.error("Please share your name, email, phone, and a brief message.");
       return;
     }
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 700));
-    toast.success("Thank you — your request has been received in confidence.", {
-      description: "We will reach out within one business day.",
-    });
-    setForm({
-      name: "",
-      email: "",
-      phone: "",
-      subject: SUBJECTS[0],
-      message: "",
-    });
-    setSubmitting(false);
+    try {
+      const res = await fetch(`${BACKEND_URL}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.detail || "Submission failed");
+      }
+      toast.success("Thank you — your request has been received in confidence.", {
+        description: "We will reach out within one business day.",
+      });
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        subject: SUBJECTS[0],
+        message: "",
+      });
+    } catch (err) {
+      toast.error("Something went wrong while sending your request.", {
+        description: "Please try again in a moment, or write to hello@trustbridgecounsel.com.",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -147,10 +169,11 @@ export default function ContactSection() {
               />
               <FieldUnderline
                 id="contact-phone"
-                label="Phone (optional)"
+                label="Phone"
                 value={form.phone}
                 onChange={update("phone")}
                 placeholder="+1 555 000 0000"
+                required
               />
               <div className="flex flex-col">
                 <label
