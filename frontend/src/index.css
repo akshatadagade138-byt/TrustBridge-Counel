@@ -139,6 +139,40 @@ body {
     color: #FAF8F6;
 }
 
+/* Highlighted CTA — soft animated halo + a slow attention pulse */
+.cta-pulse {
+    position: relative;
+    isolation: isolate;
+}
+.cta-pulse::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 9999px;
+    background: radial-gradient(closest-side, rgba(242, 221, 182, 0.55), rgba(242, 221, 182, 0));
+    opacity: 0.85;
+    z-index: -1;
+    animation: cta-halo 2.6s ease-in-out infinite;
+}
+.cta-pulse::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    box-shadow: 0 0 0 0 rgba(242, 221, 182, 0.55);
+    z-index: -1;
+    animation: cta-ring 2.6s ease-out infinite;
+}
+@keyframes cta-halo {
+    0%, 100% { opacity: 0.45; transform: scale(1); }
+    50%      { opacity: 0.85; transform: scale(1.02); }
+}
+@keyframes cta-ring {
+    0%   { box-shadow: 0 0 0 0 rgba(242, 221, 182, 0.55); }
+    70%  { box-shadow: 0 0 0 16px rgba(242, 221, 182, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(242, 221, 182, 0); }
+}
+
 .cta-outline {
     background: transparent;
     color: #3B2A24;

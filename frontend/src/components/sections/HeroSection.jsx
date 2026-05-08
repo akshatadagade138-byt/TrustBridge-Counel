@@ -1,4 +1,4 @@
-import HeroVisual from "@/components/site/HeroVisual";
+import HeroPortrait from "@/components/site/HeroPortrait";
 import { ShieldCheck, Scale, Compass, Heart, ArrowUpRight } from "lucide-react";
 
 const TRUST_BADGES = [
@@ -24,15 +24,6 @@ export default function HeroSection() {
           "radial-gradient(ellipse at 25% 0%, #4A3328 0%, #2F2019 55%, #1F1410 100%)",
       }}
     >
-      {/* Vertical left rail */}
-      <div
-        aria-hidden
-        className="hidden md:block absolute left-4 lg:left-6 top-1/2 -translate-y-1/2 text-[10px] tracking-[0.5em] uppercase text-sand/45 font-light pointer-events-none"
-        style={{ writingMode: "vertical-rl", transform: "translateY(-50%) rotate(180deg)" }}
-      >
-        EST · COUNSEL · MEDIATION · STRATEGY
-      </div>
-
       {/* Ambient color washes */}
       <div
         aria-hidden
@@ -93,21 +84,23 @@ export default function HeroSection() {
             without unnecessary damage.
           </p>
 
-          {/* CTA */}
-          <div className="mt-12 flex flex-wrap items-center gap-4">
+          {/* CTA — highlighted primary */}
+          <div className="mt-12 flex flex-wrap items-center gap-5">
             <a
               href="#contact"
               onClick={handleBook}
               data-testid="hero-cta-button"
-              className="cta-gold inline-flex items-center gap-3 font-sans text-[13px] tracking-[0.14em] rounded-full px-8 py-4"
+              className="cta-gold cta-pulse group relative inline-flex items-center gap-3 font-sans text-[14px] font-medium tracking-[0.14em] rounded-full pl-8 pr-7 py-[18px] text-espresso"
             >
-              Book a Clarity-Communication Session
-              <ArrowUpRight size={16} strokeWidth={1.6} />
+              <span>Book a Clarity-Communication Session</span>
+              <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-espresso text-cream transition-transform duration-500 group-hover:translate-x-1">
+                <ArrowUpRight size={14} strokeWidth={1.8} />
+              </span>
             </a>
             <a
               href="/services"
               data-testid="hero-secondary-cta"
-              className="cta-outline-cream font-sans text-[13px] tracking-[0.14em] rounded-full px-8 py-4 inline-flex items-center gap-2"
+              className="cta-outline-cream font-sans text-[13px] tracking-[0.14em] rounded-full px-7 py-4 inline-flex items-center gap-2"
             >
               Explore our philosophy
             </a>
@@ -128,33 +121,9 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Right visual */}
+        {/* Right visual — founder portrait placeholder */}
         <div className="lg:col-span-5 flex justify-center lg:justify-end animate-fade-in">
-          <HeroVisual />
-        </div>
-      </div>
-
-      {/* Bottom keyword strip */}
-      <div className="relative mt-20 max-w-[1280px] mx-auto px-6 lg:px-10">
-        <div
-          className="h-px w-full mb-6"
-          style={{
-            background:
-              "linear-gradient(to right, transparent, rgba(216,195,176,0.25), transparent)",
-          }}
-        />
-        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-[11px] tracking-[0.45em] uppercase text-sand/55 font-light">
-          <span>Mediation</span>
-          <span className="w-1 h-1 rounded-full bg-gold/80" />
-          <span>Counsel</span>
-          <span className="w-1 h-1 rounded-full bg-gold/80" />
-          <span>Strategy</span>
-          <span className="w-1 h-1 rounded-full bg-gold/80" />
-          <span>Boardroom</span>
-          <span className="w-1 h-1 rounded-full bg-gold/80" />
-          <span>Family</span>
-          <span className="w-1 h-1 rounded-full bg-gold/80" />
-          <span>Couples</span>
+          <HeroPortrait />
         </div>
       </div>
     </section>
