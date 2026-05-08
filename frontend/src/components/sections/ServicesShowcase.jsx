@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 /**
  * Services Showcase — used on Home and on the standalone /services page.
@@ -63,16 +64,6 @@ const CATEGORIES = [
   },
 ];
 
-const handleBook = (e) => {
-  e.preventDefault();
-  if (window.location.pathname !== "/") {
-    window.location.href = "/#contact";
-    return;
-  }
-  const el = document.getElementById("contact");
-  if (el) el.scrollIntoView({ behavior: "smooth" });
-};
-
 function ImageCollage({ images, label }) {
   if (images.length >= 3) {
     return (
@@ -136,6 +127,19 @@ function ImageCollage({ images, label }) {
 }
 
 export default function ServicesShowcase({ showHeader = true }) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleBook = (e) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/#contact");
+      return;
+    }
+    const el = document.getElementById("contact");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section
       data-testid="services-showcase"
