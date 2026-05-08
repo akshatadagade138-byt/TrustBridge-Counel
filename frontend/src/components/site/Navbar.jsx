@@ -34,8 +34,10 @@ export default function Navbar() {
     }
   };
 
-  // On Home + at top, the hero is dark — use light text.
-  const overDarkHero = !scrolled && location.pathname === "/";
+  // On Home + Services, the page top is dark — use light text.
+  const overDarkHero =
+    !scrolled &&
+    (location.pathname === "/" || location.pathname === "/services");
 
   const brandColor = overDarkHero ? "text-cream" : "text-espresso";
   const brandItalicColor = overDarkHero ? "text-sand" : "text-walnut";
