@@ -34,6 +34,18 @@ export default function Navbar() {
     }
   };
 
+  // On Home + at top, the hero is dark — use light text.
+  const overDarkHero = !scrolled && location.pathname === "/";
+
+  const brandColor = overDarkHero ? "text-cream" : "text-espresso";
+  const brandItalicColor = overDarkHero ? "text-sand" : "text-walnut";
+  const taglineColor = overDarkHero ? "text-sand/70" : "text-mocha";
+  const linkBase = overDarkHero
+    ? "text-cream/80 hover:text-gold"
+    : "text-walnut hover:text-espresso";
+  const linkActive = overDarkHero ? "text-gold" : "text-espresso";
+  const toggleColor = overDarkHero ? "text-cream" : "text-espresso";
+
   return (
     <header
       data-testid="site-navbar"
@@ -45,15 +57,15 @@ export default function Navbar() {
     >
       <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-[78px]">
         {/* Brand */}
-        <Link
-          to="/"
-          data-testid="nav-brand"
-          className="flex flex-col leading-none"
-        >
-          <span className="font-serif text-[26px] md:text-[28px] font-medium text-espresso tracking-[0.02em]">
-            TrustBridge <span className="italic text-walnut">Counsel</span>
+        <Link to="/" data-testid="nav-brand" className="flex flex-col leading-none">
+          <span
+            className={`font-serif text-[26px] md:text-[28px] font-medium tracking-[0.02em] transition-colors duration-300 ${brandColor}`}
+          >
+            TrustBridge <span className={`italic transition-colors duration-300 ${brandItalicColor}`}>Counsel</span>
           </span>
-          <span className="text-[10px] md:text-[11px] mt-[2px] tracking-[0.28em] uppercase text-mocha font-light">
+          <span
+            className={`text-[10px] md:text-[11px] mt-[2px] tracking-[0.28em] uppercase font-light transition-colors duration-300 ${taglineColor}`}
+          >
             We listen · We act · We deliver
           </span>
         </Link>
@@ -67,8 +79,8 @@ export default function Navbar() {
                 key={link.to}
                 to={link.to}
                 data-testid={`nav-link-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
-                className={`relative font-sans text-[13px] tracking-[0.18em] uppercase transition-colors ${
-                  active ? "text-espresso" : "text-walnut hover:text-espresso"
+                className={`relative font-sans text-[13px] tracking-[0.18em] uppercase transition-colors duration-300 ${
+                  active ? linkActive : linkBase
                 }`}
               >
                 {link.label}
@@ -92,7 +104,7 @@ export default function Navbar() {
         <button
           onClick={() => setOpen((v) => !v)}
           data-testid="nav-mobile-toggle"
-          className="lg:hidden text-espresso p-2"
+          className={`lg:hidden p-2 transition-colors duration-300 ${toggleColor}`}
           aria-label="Toggle menu"
         >
           {open ? <X size={22} /> : <Menu size={22} />}

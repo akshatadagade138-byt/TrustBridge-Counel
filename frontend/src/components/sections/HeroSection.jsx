@@ -18,27 +18,35 @@ export default function HeroSection() {
   return (
     <section
       data-testid="hero-section"
-      className="relative min-h-[100vh] pt-[100px] pb-20 overflow-hidden grain-overlay"
+      className="relative min-h-[100vh] pt-[100px] pb-20 overflow-hidden grain-overlay text-cream"
       style={{
         background:
-          "linear-gradient(180deg, #F7F2EE 0%, #F2EBE3 60%, #ECE2D6 100%)",
+          "radial-gradient(ellipse at 20% 0%, #5A4034 0%, #3B2A24 45%, #2A1E19 100%)",
       }}
     >
       {/* Ambient color washes */}
       <div
         aria-hidden
-        className="absolute -top-32 -left-40 w-[640px] h-[640px] rounded-full blur-3xl opacity-60"
+        className="absolute -top-32 -left-40 w-[640px] h-[640px] rounded-full blur-3xl opacity-40"
         style={{
           background:
-            "radial-gradient(closest-side, rgba(216,195,176,0.7), transparent)",
+            "radial-gradient(closest-side, rgba(176,141,87,0.55), transparent)",
         }}
       />
       <div
         aria-hidden
-        className="absolute top-40 right-[-200px] w-[680px] h-[680px] rounded-full blur-3xl opacity-50"
+        className="absolute top-40 right-[-200px] w-[680px] h-[680px] rounded-full blur-3xl opacity-35"
         style={{
           background:
-            "radial-gradient(closest-side, rgba(176,141,87,0.25), transparent)",
+            "radial-gradient(closest-side, rgba(216,195,176,0.45), transparent)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="absolute bottom-[-200px] left-1/3 w-[520px] h-[520px] rounded-full blur-3xl opacity-30"
+        style={{
+          background:
+            "radial-gradient(closest-side, rgba(176,141,87,0.4), transparent)",
         }}
       />
 
@@ -46,25 +54,27 @@ export default function HeroSection() {
         {/* Left content */}
         <div className="lg:col-span-7 animate-fade-up">
           <div className="flex items-center gap-3 mb-8">
-            <span className="gold-divider" />
-            <span className="eyebrow">Conflict & Communication Strategy</span>
+            <span className="w-14 h-px bg-gold" />
+            <span className="text-[11px] tracking-[0.32em] uppercase text-sand/80 font-light">
+              Conflict & Communication Strategy
+            </span>
           </div>
 
-          <h1 className="font-serif font-light text-espresso leading-[1.02] tracking-[-0.01em] text-[44px] sm:text-[56px] md:text-[68px] lg:text-[78px]">
+          <h1 className="font-serif font-light text-cream leading-[1.02] tracking-[-0.01em] text-[44px] sm:text-[56px] md:text-[68px] lg:text-[78px]">
             Where Communication
             <br />
-            <span className="italic text-walnut">Breaks Down,</span>
+            <span className="italic text-sand">Breaks Down,</span>
             <br />
             I Build <span className="text-gold italic">Alignment.</span>
           </h1>
 
-          <p className="mt-8 max-w-xl text-walnut/85 text-lg md:text-[19px] leading-relaxed font-light">
+          <p className="mt-8 max-w-xl text-sand/85 text-lg md:text-[19px] leading-relaxed font-light">
             From boardrooms to relationships, I work at the intersection of
             conflict, communication, and performance — helping you move from
             tension to clarity with precision.
           </p>
 
-          <p className="mt-6 max-w-xl text-ink/65 text-[15px] leading-relaxed font-light">
+          <p className="mt-6 max-w-xl text-cream/65 text-[15px] leading-relaxed font-light">
             I am a Conflict & Communication Strategist. I help couples,
             corporates, and business leaders identify and resolve the
             communication patterns that create conflict — bringing clarity,
@@ -87,7 +97,7 @@ export default function HeroSection() {
             <a
               href="/services"
               data-testid="hero-secondary-cta"
-              className="font-sans text-[13px] tracking-[0.22em] uppercase text-walnut hover:text-espresso transition-colors flex items-center gap-2 px-2 py-2"
+              className="font-sans text-[13px] tracking-[0.22em] uppercase text-sand hover:text-gold transition-colors flex items-center gap-2 px-2 py-2"
             >
               Explore Services <span aria-hidden>→</span>
             </a>
@@ -99,7 +109,7 @@ export default function HeroSection() {
               <div
                 key={label}
                 data-testid={`trust-badge-${label.toLowerCase().replace(/\s+/g, "-").replace("&", "and")}`}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-cream/70 backdrop-blur-md border border-espresso/10 text-walnut text-[11px] tracking-[0.22em] uppercase font-light shadow-[0_8px_24px_-18px_rgba(59,42,36,0.3)]"
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-cream/[0.06] backdrop-blur-md border border-cream/15 text-cream/85 text-[11px] tracking-[0.22em] uppercase font-light shadow-[0_8px_24px_-18px_rgba(0,0,0,0.4)]"
               >
                 <Icon size={14} className="text-gold" />
                 <span>{label}</span>
@@ -116,7 +126,13 @@ export default function HeroSection() {
 
       {/* Bottom hairline */}
       <div className="absolute bottom-0 left-0 right-0">
-        <div className="editorial-divider" />
+        <div
+          className="h-px w-full"
+          style={{
+            background:
+              "linear-gradient(to right, transparent, rgba(176,141,87,0.4), transparent)",
+          }}
+        />
       </div>
     </section>
   );
