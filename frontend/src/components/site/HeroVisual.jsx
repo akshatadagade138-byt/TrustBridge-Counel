@@ -181,10 +181,14 @@ export default function HeroVisual() {
         </div>
       </div>
 
-      {/* Outer floating chip */}
-      <div className="absolute -bottom-6 -left-2 md:-left-6 bg-espresso/80 backdrop-blur-md border border-gold/30 rounded-full px-5 py-2 shadow-[0_18px_40px_-20px_rgba(0,0,0,0.6)]">
-        <p className="text-[10px] tracking-[0.32em] uppercase text-sand">
-          From Tension <span className="text-gold">→</span> To Clarity
+      {/* Outer floating quote chip — editorial pull */}
+      <div className="absolute -bottom-10 -left-2 md:-left-8 lg:-left-12 max-w-[300px] bg-espresso/85 backdrop-blur-md border border-cream/10 rounded-2xl px-6 py-5 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.7)]">
+        <p className="font-serif italic text-cream text-[17px] leading-[1.4]">
+          “Most disputes don’t need a courtroom — they need a{" "}
+          <span className="text-gold">bridge.</span>”
+        </p>
+        <p className="mt-3 text-[10px] tracking-[0.35em] uppercase text-sand/70">
+          TrustBridge Counsel
         </p>
       </div>
     </div>

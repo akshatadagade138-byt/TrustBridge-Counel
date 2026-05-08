@@ -57,16 +57,28 @@ export default function Navbar() {
     >
       <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-[78px]">
         {/* Brand */}
-        <Link to="/" data-testid="nav-brand" className="flex flex-col leading-none">
+        <Link to="/" data-testid="nav-brand" className="flex items-center gap-3 leading-none">
           <span
-            className={`font-serif text-[26px] md:text-[28px] font-medium tracking-[0.02em] transition-colors duration-300 ${brandColor}`}
+            className={`relative w-10 h-10 rounded-full flex items-center justify-center font-serif text-[18px] italic transition-all duration-300 ${
+              overDarkHero
+                ? "bg-cream/[0.04] border border-cream/25 text-sand"
+                : "bg-espresso/[0.04] border border-espresso/20 text-espresso"
+            }`}
           >
-            TrustBridge <span className={`italic transition-colors duration-300 ${brandItalicColor}`}>Counsel</span>
+            T
+            <span className="absolute -top-[2px] -right-[2px] w-[6px] h-[6px] rounded-full bg-gold" />
           </span>
-          <span
-            className={`text-[10px] md:text-[11px] mt-[2px] tracking-[0.28em] uppercase font-light transition-colors duration-300 ${taglineColor}`}
-          >
-            We listen · We act · We deliver
+          <span className="flex flex-col leading-none">
+            <span
+              className={`font-serif text-[22px] md:text-[24px] font-medium tracking-[0.01em] transition-colors duration-300 ${brandColor}`}
+            >
+              TrustBridge <span className={`italic transition-colors duration-300 ${brandItalicColor}`}>Counsel</span>
+            </span>
+            <span
+              className={`text-[10px] mt-[3px] tracking-[0.28em] uppercase font-light transition-colors duration-300 ${taglineColor}`}
+            >
+              We listen · We act · We deliver
+            </span>
           </span>
         </Link>
 

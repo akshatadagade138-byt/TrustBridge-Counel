@@ -108,18 +108,35 @@ body {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
 }
 
-/* Hover lift used by primary CTAs */
+/* Hover lift used by primary CTAs — cream/butter pill on espresso text */
 .cta-gold {
-    background: #B08D57;
-    color: #FAF8F6;
+    background: linear-gradient(180deg, #F2DDB6 0%, #E6C892 100%);
+    color: #2A1E19;
     transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-    box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset, 0 8px 22px -10px rgba(59,42,36,0.4);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.5) inset,
+        0 -1px 0 rgba(176, 141, 87, 0.2) inset,
+        0 10px 26px -12px rgba(0, 0, 0, 0.45);
 }
 .cta-gold:hover {
-    background: #3B2A24;
-    color: #FAF8F6;
+    background: linear-gradient(180deg, #F7E6C6 0%, #EFD3A4 100%);
+    color: #2A1E19;
     transform: translateY(-2px);
-    box-shadow: 0 0 0 1px rgba(176,141,87,0.4), 0 18px 40px -16px rgba(59,42,36,0.45);
+    box-shadow:
+        0 0 0 1px rgba(176, 141, 87, 0.4),
+        0 18px 40px -16px rgba(0, 0, 0, 0.55);
+}
+
+.cta-outline-cream {
+    background: transparent;
+    color: #FAF8F6;
+    border: 1px solid rgba(250, 248, 246, 0.35);
+    transition: all 0.4s ease;
+}
+.cta-outline-cream:hover {
+    background: rgba(250, 248, 246, 0.08);
+    border-color: rgba(250, 248, 246, 0.6);
+    color: #FAF8F6;
 }
 
 .cta-outline {
