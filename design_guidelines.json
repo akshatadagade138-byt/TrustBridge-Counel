@@ -1,0 +1,143 @@
+{
+  "theme": "Light Theme with Heavy Contrast Sections",
+  "archetype": "Archetype 5 (Jewel & Luxury) adapted for Earthy Warmth",
+  "brand_identity": {
+    "name": "TrustBridge Counsel",
+    "tone": "Calm, deeply trustworthy, psychologically safe, elegant, mature, premium, editorial, structured, emotionally neutral.",
+    "avoid": [
+      "startup/SaaS aesthetics",
+      "bright gradients",
+      "flashy UI",
+      "cartoon illustrations",
+      "corporate stock images",
+      "techy dashboards",
+      "clutter"
+    ]
+  },
+  "colors": {
+    "primary": {
+      "deep_espresso": "#3B2A24",
+      "warm_walnut": "#5A4034",
+      "soft_mocha": "#8B6B5C",
+      "sand_beige": "#D8C3B0",
+      "warm_ivory": "#F7F2EE"
+    },
+    "accent": {
+      "muted_gold": "#B08D57"
+    },
+    "text": {
+      "dark": "#2A2A2A",
+      "light": "#FAF8F6"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "headings": {
+        "family": "Cormorant Garamond, serif",
+        "weight": "font-medium to font-semibold",
+        "description": "Used for all primary headings, quotes, and the brand logo text. Delivers an editorial, luxurious, and intelligent feel."
+      },
+      "body": {
+        "family": "Manrope, sans-serif",
+        "weight": "font-light to font-normal",
+        "description": "Clean, minimal sans-serif for high legibility and a grounded, modern contrast to the serif."
+      }
+    },
+    "scales": {
+      "h1": "text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[1.1]",
+      "h2": "text-3xl md:text-4xl lg:text-5xl tracking-tight leading-snug",
+      "h3": "text-2xl md:text-3xl tracking-tight",
+      "quote": "text-3xl md:text-4xl lg:text-5xl italic leading-relaxed text-center",
+      "body": "text-base md:text-lg leading-relaxed text-[#2A2A2A]/80",
+      "small_label": "text-xs md:text-sm uppercase tracking-[0.2em] font-semibold"
+    }
+  },
+  "surfaces_and_materials": {
+    "glassmorphism": "backdrop-blur-xl bg-[#F7F2EE]/70 border-b border-[#3B2A24]/10",
+    "cards": "bg-[#FAF8F6] rounded-[24px] border border-[#D8C3B0]/40 shadow-[0_8px_32px_rgba(59,42,36,0.04)]",
+    "gradients": {
+      "soft_matte": "bg-gradient-to-b from-[#F7F2EE] to-[#D8C3B0]/30",
+      "hero_overlay": "bg-gradient-to-r from-[#F7F2EE] via-[#F7F2EE]/90 to-transparent"
+    }
+  },
+  "components": {
+    "navbar": {
+      "style": "Floating transparent navbar on initial load. On scroll: soft glassmorphism (backdrop-blur-xl bg-[#F7F2EE]/80) with subtle border-b border-[#3B2A24]/10.",
+      "brand": "'TrustBridge Counsel' (Cormorant Garamond, text-2xl, #3B2A24). Tagline: 'We listen, We act, We Deliver' (text-xs, italic, text-[#5A4034]).",
+      "links": "Right nav: Home, About Us, Services, Blogs, Book Consultation. Links should use Manrope, text-sm, hover:text-[#B08D57] transition-colors.",
+      "cta": "Pill shape (rounded-full), bg-[#B08D57] text-[#FAF8F6]. Elegant hover glow: hover:shadow-[0_0_20px_rgba(176,141,87,0.4)] hover:bg-[#3B2A24]."
+    },
+    "buttons": {
+      "primary": "rounded-full px-8 py-4 bg-[#B08D57] text-[#FAF8F6] font-medium transition-all duration-300 hover:bg-[#3B2A24] hover:shadow-[0_8px_24px_rgba(59,42,36,0.2)] hover:-translate-y-1",
+      "secondary": "rounded-full px-8 py-4 bg-transparent border-2 border-[#3B2A24] text-[#3B2A24] font-medium hover:bg-[#3B2A24] hover:text-[#FAF8F6]"
+    },
+    "trust_badges": {
+      "style": "Small pill-shaped tags or flex items with a dot/icon. bg-[#F7F2EE] border border-[#D8C3B0] text-[#5A4034] text-xs uppercase tracking-wider rounded-full px-4 py-2"
+    }
+  },
+  "layout_and_sections": {
+    "hero": {
+      "layout": "Almost full viewport (min-h-[90vh]). Split layout: left content (60%), right abstract visual (40%).",
+      "left_content": "Headline: 'Where Communication Breaks Down, I Build Alignment.' in Cormorant Garamond. Supporting text in Manrope. CTA + Trust Badges grid below.",
+      "right_visual": "Abstract right-side visual. Use Framer Motion for subtle floating SVG/CSS blobs in Sand Beige and Soft Mocha, heavily blurred (blur-3xl). Overlay the provided `hero_abstract_visual` image with a soft gradient mask to blend it seamlessly into the Warm Ivory background. NO stock photos or people."
+    },
+    "why_trustbridge": {
+      "title": "Why TrustBridge Counsel?",
+      "layout": "3 feature blocks in a grid (grid-cols-1 md:grid-cols-3).",
+      "cards": "Pattern Awareness, Conflict De-escalation, Conscious Decision-Making. Premium matte cards (see surfaces: cards), rounded-3xl (24px), internal padding p-10."
+    },
+    "center_quote": {
+      "layout": "Massive vertical padding (py-32). bg-[#3B2A24] text-[#FAF8F6] or use `quote_background` image with heavy dark overlay.",
+      "content": "'When it comes to conflict and communication, how it is handled matters as much as what is said.' in Cormorant Garamond, center aligned, max-w-4xl mx-auto."
+    },
+    "trust_value_grid": {
+      "layout": "6 cards in a bento-style or balanced grid (grid-cols-1 md:grid-cols-2 lg:grid-cols-3) gap-6.",
+      "content": "Confidential & Secure, Neutral & Unbiased, Structured & Solution-Focused, Respectful & Professional, Clarity Over Assumptions, Real Situations, Real Resolution."
+    },
+    "contact_form": {
+      "layout": "Bottom of Home page (scroll target for 'Book Consultation'). Soft matte gradient background. Minimalist Shadcn form customized to remove generic borders, using border-b only for inputs (editorial style).",
+      "style": "Inputs: bg-transparent border-b border-[#3B2A24]/20 rounded-none focus:border-[#B08D57] focus:ring-0. Elegant and unintrusive."
+    },
+    "footer": {
+      "layout": "py-20. bg-[#3B2A24] text-[#FAF8F6].",
+      "content": "Brand + tagline, quick links, CTA, contact placeholder, 'Confidential. Respectful. Solution Focused.'"
+    }
+  },
+  "image_urls": [
+    {
+      "name": "hero_abstract_visual",
+      "url": "https://static.prod-images.emergentagent.com/jobs/21ca57f1-c5bb-45fd-adaf-f60963120b78/images/29655d91a381f1c7834a9e054259e0a20a5649b6e751db97526a5a21190dd478.png",
+      "category": "Hero Right Side",
+      "description": "Abstract luxury editorial composition for the right side of the hero section. Soft architectural lines representing communication. Use with a gradient fade."
+    },
+    {
+      "name": "quote_background",
+      "url": "https://static.prod-images.emergentagent.com/jobs/21ca57f1-c5bb-45fd-adaf-f60963120b78/images/e0f583f75786e0eaa903f9ccab0b0a6bc131bf1d1293308889f95fe4b862b6a5.png",
+      "category": "Section Background",
+      "description": "Abstract soft matte gradient for the center quote section or contact section background to add texture."
+    },
+    {
+      "name": "feature_abstract",
+      "url": "https://static.prod-images.emergentagent.com/jobs/21ca57f1-c5bb-45fd-adaf-f60963120b78/images/7219d8a9ea778175ac414e1c757923507ae96342a1573e435542c7c8e6d85178.png",
+      "category": "Feature / Decorative",
+      "description": "Minimalist abstract sculpture in deep espresso and walnut wood, to be used selectively inside feature cards or as decorative imagery in the 'Why TrustBridge' section."
+    }
+  ],
+  "testing_guidelines": {
+    "required_attributes": [
+      "data-testid"
+    ],
+    "elements_to_target": [
+      "navbar",
+      "nav-link-home",
+      "nav-link-about",
+      "nav-cta-book",
+      "hero-cta-button",
+      "feature-card",
+      "trust-value-card",
+      "contact-form",
+      "contact-submit-button"
+    ],
+    "rule": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case."
+  }
+}
