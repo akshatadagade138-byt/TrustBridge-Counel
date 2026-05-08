@@ -34,10 +34,12 @@ export default function Navbar() {
     }
   };
 
-  // On Home + Services, the page top is dark — use light text.
+  // On Home, Services, About — the page top is dark — use light text.
   const overDarkHero =
     !scrolled &&
-    (location.pathname === "/" || location.pathname === "/services");
+    (location.pathname === "/" ||
+      location.pathname === "/services" ||
+      location.pathname === "/about");
 
   const brandColor = overDarkHero ? "text-cream" : "text-espresso";
   const brandItalicColor = overDarkHero ? "text-sand" : "text-walnut";
