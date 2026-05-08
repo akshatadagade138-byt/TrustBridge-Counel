@@ -21,7 +21,7 @@ export default function ScrollToTop() {
       setTimeout(tryScroll, 60);
       return;
     }
-    window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+    window.scrollTo({ top: 0, behavior: "auto" });
   }, [pathname, hash]);
 
   return null;

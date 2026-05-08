@@ -106,6 +106,7 @@ export default function ContactSection() {
           <form
             onSubmit={handleSubmit}
             data-testid="contact-form"
+            noValidate
             className="relative bg-cream/90 backdrop-blur-md border border-sand/60 rounded-[28px] p-8 md:p-12 shadow-[0_30px_80px_-40px_rgba(59,42,36,0.25)]"
           >
             <p className="font-serif italic text-walnut/60 text-base mb-10">

@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const handleBook = (e) => {
     e.preventDefault();
-    if (window.location.pathname !== "/") {
-      window.location.href = "/#contact";
+    if (location.pathname !== "/") {
+      navigate("/#contact");
       return;
     }
     const el = document.getElementById("contact");
