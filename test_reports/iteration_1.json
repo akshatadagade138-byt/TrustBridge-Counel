@@ -1,0 +1,28 @@
+{
+  "summary": "Frontend-only E2E testing of the TrustBridge Counsel premium landing page completed via Playwright on the production REACT_APP_BACKEND_URL. All 14 listed feature checks passed end-to-end with zero console errors.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Footer 'Book a Consultation' CTA uses window.location.href = '/#contact' on non-home routes which causes a full page reload (instead of react-router navigate('/#contact') like Navbar). Minor UX nit — not in scope of listed test cases but worth aligning with Navbar behaviour.",
+    "ContactSection submit relies on browser-native required attributes for name/email/message — the toast.error branch is effectively unreachable in a normal browser submit because the browser will block submission first. Tests had to remove `required` to verify the error-toast logic. Consider using novalidate on the form or removing required attrs so the custom validation toast is the single source of truth.",
+    "Contact form is fully client-side (mocked) — confirmed per agent context. No persistence yet; OK for this iteration.",
+    "ScrollToTop uses 'instant' for scroll behavior via an `'instant' in window` check which is incorrect; should be `'scrollBehavior' in document.documentElement.style` or just pass 'auto'. Currently it falls through to 'auto' so behavior is fine — minor."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped)", "frontend": "100%"},
+  "test_credentials": "N/A — static page, no auth",
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "All 14 listed features verified on https://executive-counsel-3.preview.emergentagent.com. Verified: navbar fixed with brand+tagline; nav links route via react-router (URL updates without reload); 'Book Consultation' from Navbar scrolls to #contact on Home and navigates to /#contact then scrolls from non-home routes; Hero CTA scrolls to #contact (contact_rect_top ≈ 0.3 after scroll); 4 trust badges present with exact labels; 3 feature cards (Pattern Awareness / Conflict De-escalation / Conscious Decision-Making); CenterQuote on dark espresso bg renders correctly; 6 trust value cards present; ContactSection error toast appears for empty submit, success toast appears for valid submit and form is reset; About/Services/Blogs all render PageShell with page-shell-cta linking to /#contact; Mobile toggle (390x844) opens menu showing mobile nav links and mobile Book Consultation CTA. Zero console errors on initial load and during flows.",
+  "rca of the issue": "No issues found."
+}
