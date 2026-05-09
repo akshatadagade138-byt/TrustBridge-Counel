@@ -16,9 +16,24 @@ export default function WhatsAppButton() {
     PREFILLED_MESSAGE
   )}`;
 
+  const openWhatsApp = (e) => {
+    e.preventDefault();
+    // Force a top-level new tab — avoids iframe / preview "blocked by response" errors.
+    const win = window.open(href, "_blank", "noopener,noreferrer");
+    if (!win) {
+      // Popup blocked — fall back to top-frame navigation.
+      try {
+        window.top.location.href = href;
+      } catch {
+        window.location.href = href;
+      }
+    }
+  };
+
   return (
     <a
       href={href}
+      onClick={openWhatsApp}
       target="_blank"
       rel="noopener noreferrer"
       data-testid="whatsapp-fab"
