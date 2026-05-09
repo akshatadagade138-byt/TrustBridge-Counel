@@ -6,7 +6,7 @@ import { useState } from "react";
  * practice responds manually. Phone number is set via the WHATSAPP_NUMBER
  * constant below (international format, digits only — e.g. 919876543210).
  */
-const WHATSAPP_NUMBER = "919606938334"; // +91 96069 38334
+const WHATSAPP_NUMBER = "919108364011"; // +91 91083 64011
 const PREFILLED_MESSAGE =
   "Hello TrustBridge Counsel — I would like to know more about a Clarity-Communication Session.";
 
