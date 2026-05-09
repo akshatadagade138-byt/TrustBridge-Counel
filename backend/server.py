@@ -47,7 +47,7 @@ class StatusCheckCreate(BaseModel):
 class ConsultationRequest(BaseModel):
     name: str = Field(..., min_length=1, max_length=200)
     email: EmailStr
-    phone: str = Field(..., min_length=4, max_length=40)
+    phone: str = Field(..., pattern=r"^\d{10}$")
     subject: str = Field(default="", max_length=120)
     message: str = Field(..., min_length=1, max_length=4000)
 

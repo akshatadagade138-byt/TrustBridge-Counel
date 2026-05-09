@@ -26,13 +26,17 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const phoneDigits = form.phone.replace(/\D/g, "");
     if (
       !form.name.trim() ||
       !form.email.trim() ||
-      !form.phone.trim() ||
       !form.message.trim()
     ) {
       toast.error("Please share your name, email, phone, and a brief message.");
+      return;
+    }
+    if (phoneDigits.length !== 10) {
+      toast.error("Please enter a valid 10-digit phone number.");
       return;
     }
     setSubmitting(true);
@@ -40,7 +44,7 @@ export default function ContactSection() {
       const res = await fetch(`${BACKEND_URL}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, phone: phoneDigits }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
@@ -167,14 +171,31 @@ export default function ContactSection() {
                 placeholder="you@example.com"
                 required
               />
-              <FieldUnderline
-                id="contact-phone"
-                label="Phone"
-                value={form.phone}
-                onChange={update("phone")}
-                placeholder="+1 555 000 0000"
-                required
-              />
+              <div className="flex flex-col">
+                <label
+                  htmlFor="contact-phone"
+                  className="text-[11px] tracking-[0.32em] uppercase text-sand/70 font-light mb-3"
+                >
+                  Phone
+                </label>
+                <input
+                  id="contact-phone"
+                  data-testid="contact-phone"
+                  type="tel"
+                  inputMode="numeric"
+                  autoComplete="tel-national"
+                  pattern="[0-9]{10}"
+                  maxLength={10}
+                  value={form.phone}
+                  onChange={(e) => {
+                    const digits = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    setForm((f) => ({ ...f, phone: digits }));
+                  }}
+                  placeholder="10-digit number"
+                  required
+                  className="bg-transparent border-b border-cream/20 focus:border-gold outline-none py-3 font-light text-cream text-[15px] tracking-[0.05em] placeholder:text-sand/30"
+                />
+              </div>
               <div className="flex flex-col">
                 <label
                   htmlFor="contact-subject"
