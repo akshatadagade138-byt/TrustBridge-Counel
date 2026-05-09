@@ -114,7 +114,7 @@ async def submit_consultation(payload: ConsultationRequest):
     # Best-effort forward to Google Sheets via Apps Script Web App.
     if GOOGLE_SHEETS_WEBHOOK_URL:
         try:
-            async with httpx.AsyncClient(timeout=8.0) as http:
+            async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as http:
                 resp = await http.post(
                     GOOGLE_SHEETS_WEBHOOK_URL,
                     json={
