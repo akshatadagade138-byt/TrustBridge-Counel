@@ -63,12 +63,12 @@ export default function Navbar() {
         {/* Brand */}
         <Link to="/" data-testid="nav-brand" className="flex flex-col leading-none">
           <span
-            className={`font-serif text-[26px] md:text-[28px] font-medium tracking-[0.02em] transition-colors duration-300 ${brandColor}`}
+            className={`font-serif text-[26px] md:text-[28px] font-semi-bold tracking-[0.02em] transition-colors duration-300 ${brandColor}`}
           >
             TrustBridge <span className={`italic transition-colors duration-300 ${brandItalicColor}`}>Counsel</span>
           </span>
           <span
-            className={`text-[10px] md:text-[11px] mt-[3px] tracking-[0.32em] uppercase font-medium transition-colors duration-300 ${taglineColor}`}
+            className={`text-[10px] md:text-[11px] mt-[5px] -ml-[9px] tracking-[0.32em] uppercase font-bold transition-colors duration-300 ${taglineColor}`}
           >
             We listen · We act · We deliver
           </span>

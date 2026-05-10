@@ -33,12 +33,17 @@ export default function CenterQuote() {
           matters as much as what is said.”
         </p>
 
-        <div className="mt-14 flex justify-center items-center gap-4">
-          <span className="w-12 h-px bg-sand/40" />
-          <span className="font-serif italic text-sand/80 text-base">
-            TrustBridge Counsel
+        <div className="mt-14 flex flex-col items-center gap-3">
+          <div className="flex justify-center items-center gap-4">
+            <span className="w-12 h-px bg-sand/40" />
+            <span className="font-serif italic text-sand/80 text-base">
+              TrustBridge Counsel
+            </span>
+            <span className="w-12 h-px bg-sand/40" />
+          </div>
+          <span className="text-sand/70 text-sm uppercase tracking-[0.3em]">
+            we act, we listen, we deliver
           </span>
-          <span className="w-12 h-px bg-sand/40" />
         </div>
       </div>
     </section>

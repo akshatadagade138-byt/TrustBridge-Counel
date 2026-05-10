@@ -53,35 +53,15 @@ export default function HeroSection() {
       <div className="relative max-w-[1280px] mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-14 lg:gap-10 items-center">
         {/* Left content */}
         <div className="lg:col-span-7 animate-fade-up">
-          <div className="flex items-center gap-3 mb-10">
-            <span className="w-14 h-px bg-gold" />
-            <span className="text-[11px] tracking-[0.42em] uppercase text-sand/85 font-light">
-              Conflict & Communication Strategy
-            </span>
-          </div>
 
           <h1 className="font-serif font-light text-cream leading-[1.0] tracking-[-0.015em] text-[44px] sm:text-[58px] md:text-[72px] lg:text-[84px]">
-            Where Communication
+            Conflict Resolution,
             <br />
-            <span className="italic text-gold">Breaks Down,</span>
-            <br />
-            I Build <span className="italic text-sand">Alignment.</span>
+            <span className="italic text-gold">Communication Strategy</span>
           </h1>
 
           <p className="mt-10 max-w-xl text-sand/85 text-lg md:text-[19px] leading-relaxed font-light">
-            From boardrooms to relationships, I work at the intersection of
-            conflict, communication, and performance — helping you move from
-            tension to clarity with precision.
-          </p>
-
-          <p className="mt-6 max-w-xl text-cream/65 text-[15px] leading-relaxed font-light">
-            I am a Conflict & Communication Strategist. I help couples,
-            corporates, and business leaders identify and resolve the
-            communication patterns that create conflict — bringing clarity,
-            alignment, and forward movement. My role is to help you understand
-            patterns, de-escalate situations, and make clear decisions —
-            whether that means repairing the relationship or separating
-            without unnecessary damage.
+            Helping individuals, families and organizations navigate conflict with clarity, structure, and conscious communication.
           </p>
 
           {/* CTA — highlighted primary */}
@@ -96,13 +76,6 @@ export default function HeroSection() {
               <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-espresso text-cream transition-transform duration-500 group-hover:translate-x-1">
                 <ArrowUpRight size={14} strokeWidth={1.8} />
               </span>
-            </a>
-            <a
-              href="/services"
-              data-testid="hero-secondary-cta"
-              className="cta-outline-cream font-sans text-[13px] tracking-[0.14em] rounded-full px-7 py-4 inline-flex items-center gap-2"
-            >
-              Explore our philosophy
             </a>
           </div>
 

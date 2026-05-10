@@ -50,7 +50,7 @@ export default function TrustValueGrid() {
   return (
     <section
       data-testid="trust-value-section"
-      className="relative py-28 md:py-36 grain-overlay"
+      className="relative py-28 md:py-18 grain-overlay"
       style={{
         background:
           "linear-gradient(180deg, #F7F2EE 0%, #ECE2D6 100%)",
@@ -58,12 +58,8 @@ export default function TrustValueGrid() {
     >
       <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
         <div className="max-w-3xl mb-20">
-          <div className="flex items-center gap-3 mb-5">
-            <span className="gold-divider" />
-            <span className="eyebrow">What You Can Expect</span>
-          </div>
           <h2 className="font-serif font-light text-espresso text-[40px] md:text-[56px] leading-[1.02] tracking-[-0.005em]">
-            Six commitments, <span className="italic text-walnut">quietly</span> kept.
+            What You <span className="italic text-walnut">Can</span> Expect.
           </h2>
         </div>
 

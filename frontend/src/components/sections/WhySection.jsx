@@ -4,9 +4,8 @@ const FEATURES = [
   {
     title: "Pattern Awareness",
     icon: Eye,
-    plate: "I.",
     intro:
-      "We help you recognise the architecture beneath the conflict — the loops you can't see from inside it.",
+      "Identify the hidden patterns driving conflict.",
     points: [
       "Toxic cycles & projections",
       "Ego clashes & power dynamics",
@@ -17,9 +16,8 @@ const FEATURES = [
   {
     title: "Conflict De-escalation",
     icon: MessageSquareDashed,
-    plate: "II.",
     intro:
-      "Structured language and pacing that lower the temperature without losing the truth of what needs to be said.",
+      "Reduce tension through structured communication.",
     points: [
       "Communication without escalation",
       "When to pause vs. when to react",
@@ -30,9 +28,8 @@ const FEATURES = [
   {
     title: "Conscious Decision-Making",
     icon: Compass,
-    plate: "III.",
     intro:
-      "Move from reactivity to clarity — and to a decision you can stand behind, in personal life or in the boardroom.",
+      "Move from emotional reactions to clear decisions.",
     points: [
       "Repair with structure",
       "Separate with dignity",
@@ -46,7 +43,7 @@ export default function WhySection() {
   return (
     <section
       data-testid="why-section"
-      className="relative py-28 md:py-36 grain-overlay"
+      className="relative py-28 md:py-20 grain-overlay"
       style={{
         background:
           "linear-gradient(180deg, #F7F2EE 0%, #FAF8F6 50%, #F7F2EE 100%)",
@@ -56,21 +53,9 @@ export default function WhySection() {
         {/* Section header */}
         <div className="grid md:grid-cols-12 gap-10 items-end mb-20">
           <div className="md:col-span-7">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="gold-divider" />
-              <span className="eyebrow">The Practice</span>
-            </div>
             <h2 className="font-serif font-light text-espresso text-[40px] md:text-[56px] leading-[1.02] tracking-[-0.005em]">
-              Why <span className="italic text-walnut">TrustBridge</span>
-              <br />
-              Counsel?
+              Why <span className="italic text-walnut">TrustBridge</span> Counsel?
             </h2>
-          </div>
-          <div className="md:col-span-5">
-            <p className="text-walnut/85 text-lg leading-relaxed font-light max-w-md">
-              When communication fails, conflict grows. Structured clarity
-              changes outcomes — quietly, deliberately, and with dignity.
-            </p>
           </div>
         </div>
 
@@ -112,9 +97,6 @@ export default function WhySection() {
               </ul>
 
               <div className="editorial-divider opacity-30 mt-8" />
-              <p className="mt-5 eyebrow text-mocha/80">
-                Approach · {plate.replace(".", "")}
-              </p>
             </article>
           ))}
         </div>
