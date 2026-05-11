@@ -59,17 +59,10 @@ export default function HeroPortrait({ imageUrl = PLACEHOLDER_PORTRAIT }) {
 
         {/* Top serif label */}
         <div className="absolute top-6 left-6 text-cream/85">
-          <p className="font-serif italic text-[20px] leading-none">II.</p>
-          <p className="mt-2 text-[9px] tracking-[0.42em] uppercase text-sand/80 font-light">
-            Communication · Clarity
-          </p>
         </div>
 
         {/* Bottom caption */}
         <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-[10px] tracking-[0.32em] uppercase text-sand/80 font-light">
-          <span>Plate 02</span>
-          <span className="w-14 h-px bg-gold/70" />
-          <span>Founder Study</span>
         </div>
       </div>
 

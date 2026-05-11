@@ -55,7 +55,7 @@ export default function WhoThisIsFor() {
   return (
     <section
       data-testid="who-this-is-for-section"
-      className="relative py-28 md:py-36 overflow-hidden grain-overlay text-cream"
+      className="relative py-20 md:py-24 overflow-hidden grain-overlay text-cream"
       style={{
         background:
           "radial-gradient(ellipse at 75% 0%, #4A3328 0%, #2F2019 55%, #1F1410 100%)",
@@ -76,29 +76,16 @@ export default function WhoThisIsFor() {
         <div className="grid md:grid-cols-12 gap-10 items-end mb-20">
           <div className="md:col-span-7">
             <div className="flex items-center gap-3 mb-5">
-              <span className="w-14 h-px bg-gold" />
-              <span className="text-[11px] tracking-[0.42em] uppercase text-sand/85 font-light">
-                Who This Is For
-              </span>
             </div>
             <h2 className="font-serif font-light text-cream text-[40px] md:text-[60px] leading-[1.02] tracking-[-0.005em]">
-              Three rooms.
-              <br />
-              <span className="italic text-gold">One discipline.</span>
+              Who This <span className="italic text-gold">Is For.</span>
             </h2>
-          </div>
-          <div className="md:col-span-5">
-            <p className="text-sand/80 text-lg leading-relaxed font-light max-w-md">
-              The work is the same — pattern, language, decision. The setting
-              changes; the architecture does not. Find yourself in one of the
-              three.
-            </p>
           </div>
         </div>
 
         {/* Cards */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {GROUPS.map(({ title, icon: Icon, intro, points, eyebrow }, idx) => (
+          {GROUPS.map(({ title, icon: Icon, intro, points }, idx) => (
             <article
               key={title}
               data-testid={`who-card-${idx}`}
@@ -109,10 +96,6 @@ export default function WhoThisIsFor() {
                 border: "1px solid rgba(250,248,246,0.10)",
               }}
             >
-              <div className="absolute top-7 right-7 font-serif italic text-sand/40 text-xl">
-                {eyebrow}
-              </div>
-
               <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-cream/[0.04] border border-cream/15 mb-7 transition-colors group-hover:border-gold/50">
                 <Icon size={20} className="text-gold" />
               </div>

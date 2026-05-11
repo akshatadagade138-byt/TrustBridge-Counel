@@ -80,10 +80,6 @@ export default function Services() {
 
         <div className="relative max-w-[1100px] mx-auto px-6 lg:px-10">
           <div className="flex items-center gap-3 mb-6">
-            <span className="w-14 h-px bg-gold" />
-            <span className="text-[11px] tracking-[0.42em] uppercase text-sand/85 font-light">
-              Services
-            </span>
           </div>
           <h1 className="font-serif font-light text-cream text-[48px] sm:text-[64px] md:text-[84px] leading-[1.0] tracking-[-0.015em]">
             What we offer.
@@ -111,10 +107,6 @@ export default function Services() {
       >
         <div className="max-w-[1180px] mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-14 items-start">
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="gold-divider" />
-              <span className="eyebrow">The Intervention</span>
-            </div>
             <h2 className="font-serif font-light text-espresso text-[40px] md:text-[54px] leading-[1.05] tracking-[-0.005em]">
               A <span className="italic text-walnut">structured</span>
               <br />

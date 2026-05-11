@@ -101,16 +101,9 @@ export default function ContactSection() {
         <div className="lg:col-span-5">
           <div className="flex items-center gap-3 mb-6">
             <span className="w-14 h-px bg-gold" />
-            <span className="text-[11px] tracking-[0.42em] uppercase text-sand/85 font-light">
-              Book a Consultation
-            </span>
           </div>
           <h2 className="font-serif font-light text-cream text-[40px] md:text-[58px] leading-[1.04] tracking-[-0.005em]">
-            A quiet room.
-            <br />
-            A clear <span className="italic text-sand">conversation.</span>
-            <br />
-            A considered <span className="text-gold italic">next step.</span>
+            Book a <span className="italic text-gold">Consultation.</span>
           </h2>
 
           <p className="mt-7 text-sand/85 text-lg leading-relaxed font-light max-w-md">
@@ -156,10 +149,10 @@ export default function ContactSection() {
             <div className="grid md:grid-cols-2 gap-x-10 gap-y-8">
               <FieldUnderline
                 id="contact-name"
-                label="Your name"
+                label="Your name (Individual / Company)"
                 value={form.name}
                 onChange={update("name")}
-                placeholder="First & last name"
+                placeholder="Name or company name"
                 required
               />
               <FieldUnderline

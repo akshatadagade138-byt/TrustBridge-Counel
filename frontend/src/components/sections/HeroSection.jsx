@@ -54,14 +54,18 @@ export default function HeroSection() {
         {/* Left content */}
         <div className="lg:col-span-7 animate-fade-up">
 
-          <h1 className="font-serif font-light text-cream leading-[1.0] tracking-[-0.015em] text-[44px] sm:text-[58px] md:text-[72px] lg:text-[84px]">
-            Conflict Resolution,
+          <h1 className="font-serif font-light text-cream leading-[1.05] tracking-[-0.015em] text-[38px] sm:text-[48px] md:text-[58px] lg:text-[68px]">
+            Where Communication Breaks Down,
             <br />
-            <span className="italic text-gold">Communication Strategy</span>
+            <span className="italic text-gold">I Build Alignment.</span>
           </h1>
 
-          <p className="mt-10 max-w-xl text-sand/85 text-lg md:text-[19px] leading-relaxed font-light">
-            Helping individuals, families and organizations navigate conflict with clarity, structure, and conscious communication.
+          <p className="mt-8 max-w-xl text-sand/85 text-[15px] md:text-[17px] leading-relaxed font-light">
+            I am a Conflict & Communication Strategist. I help couples, corporates, and business leaders identify and resolve communication patterns that create conflict—bringing clarity, alignment, and forward movement.
+          </p>
+
+          <p className="mt-4 max-w-xl text-sand/70 text-[14px] md:text-[15px] leading-relaxed font-light">
+            My role is to help them understand patterns, de-escalate situations, and make clear decisions—whether that means repairing the relationship or separating without unnecessary damage.
           </p>
 
           {/* CTA — highlighted primary */}

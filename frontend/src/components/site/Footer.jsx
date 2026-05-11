@@ -1,5 +1,5 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -91,18 +91,12 @@ export default function Footer() {
             <p className="eyebrow text-sand/70 mb-6">Reach Us</p>
             <ul className="space-y-4 font-light text-cream/85">
               <li className="flex items-start gap-3">
-                <Mail size={16} className="text-gold mt-1 shrink-0" />
-                <span data-testid="footer-email">hello@trustbridgecounsel.com</span>
-              </li>
-              <li className="flex items-start gap-3">
                 <Phone size={16} className="text-gold mt-1 shrink-0" />
-                <span data-testid="footer-phone">By appointment only</span>
+                <span data-testid="footer-phone">9606938334</span>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin size={16} className="text-gold mt-1 shrink-0" />
-                <span data-testid="footer-location">
-                  Private sessions — in person & virtual
-                </span>
+                <Mail size={16} className="text-gold mt-1 shrink-0" />
+                <span data-testid="footer-email">pinky@trustbridgecounsel.in</span>
               </li>
             </ul>
           </div>

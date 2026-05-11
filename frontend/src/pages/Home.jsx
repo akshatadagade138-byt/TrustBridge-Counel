@@ -3,7 +3,9 @@ import WhySection from "@/components/sections/WhySection";
 import CenterQuote from "@/components/sections/CenterQuote";
 import TrustValueGrid from "@/components/sections/TrustValueGrid";
 import WhoThisIsFor from "@/components/sections/WhoThisIsFor";
-import ServicesShowcase from "@/components/sections/ServicesShowcase";
+import CouplesServices from "@/components/sections/CouplesServices";
+import CorporateServices from "@/components/sections/CorporateServices";
+import BusinessServices from "@/components/sections/BusinessServices";
 import ContactSection from "@/components/sections/ContactSection";
 
 export default function Home() {
@@ -20,7 +22,11 @@ export default function Home() {
       {/* DARK */}
       <WhoThisIsFor />
       {/* LIGHT */}
-      <ServicesShowcase />
+      <CouplesServices />
+      {/* LIGHT */}
+      <CorporateServices />
+      {/* LIGHT */}
+      <BusinessServices />
       {/* DARK */}
       <ContactSection />
     </main>
