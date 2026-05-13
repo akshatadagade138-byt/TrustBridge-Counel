@@ -4,8 +4,7 @@ import { ShieldCheck, Scale, Compass, Heart, ArrowUpRight } from "lucide-react";
 const TRUST_BADGES = [
   { label: "Confidential & Secure", icon: ShieldCheck },
   { label: "Neutral & Supportive", icon: Scale },
-  { label: "Solution Focused", icon: Compass },
-  { label: "Respectful Approach", icon: Heart },
+  { label: "Solution Focused", icon: Compass }
 ];
 
 export default function HeroSection() {

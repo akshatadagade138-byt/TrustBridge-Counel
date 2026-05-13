@@ -4,32 +4,26 @@ import { MessageCircle, Flower2, VolumeX, HelpCircle, Scale, Building2, Heart, S
  * Couples Services Section — Home page only
  *
  * Two parts:
- * 1. Pain points grid with 4 images + icons + descriptions
+ * 1. Pain points grid with 3 images + icons + descriptions
  * 2. Services cards (4 offerings)
  */
 
 const PAIN_POINTS = [
   {
     id: 1,
-    image: null,
+    image: "/images/couple/Cimage1.png",
     icon: MessageCircle,
     text: "Connection feels distant.",
   },
   {
     id: 2,
-    image: null,
-    icon: VolumeX,
-    text: "Arguments or silence.",
-  },
-  {
-    id: 3,
-    image: null,
+    image: "/images/couple/Cimage2.png",
     icon: Scale,
     text: "Considering legal options.",
   },
   {
-    id: 4,
-    image: null,
+    id: 3,
+    image: "/images/couple/Cimage3.webp",
     icon: Building2,
     text: "Worried about family impact.",
   },
@@ -70,7 +64,7 @@ function PainPointCard({ item }) {
   const Icon = item.icon;
 
   return (
-    <div className="flex flex-col items-center text-center">
+    <div className="flex flex-col w-full">
       {/* Image with overlapping icon */}
       <div className="relative w-full mb-8">
         {/* Image */}
@@ -90,13 +84,13 @@ function PainPointCard({ item }) {
         </div>
 
         {/* Icon - positioned half on image */}
-        <div className="absolute left-1/2 -translate-x-1/2 -bottom-5 w-11 h-11 rounded-full bg-ivory border-2 border-gold shadow-md flex items-center justify-center">
-          <Icon size={18} strokeWidth={2} className="text-gold" />
+        <div className="absolute left-1/2 -translate-x-1/2 -bottom-6 w-14 h-14 rounded-full bg-ivory border-2 border-gold shadow-md flex items-center justify-center">
+          <Icon size={24} strokeWidth={2} className="text-gold" />
         </div>
       </div>
 
       {/* Text */}
-      <p className="text-walnut/85 text-sm leading-relaxed font-light max-w-[160px]">
+      <p className="text-walnut/85 text-sm leading-relaxed font-light text-center">
         {item.text}
       </p>
     </div>
@@ -182,9 +176,9 @@ export default function CouplesServices() {
               </p>
             </div>
 
-            {/* Right: 4 Pain Point Cards */}
+            {/* Right: 3 Pain Point Cards */}
             <div className="lg:col-span-7">
-              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
                 {PAIN_POINTS.map((item) => (
                   <PainPointCard key={item.id} item={item} />
                 ))}

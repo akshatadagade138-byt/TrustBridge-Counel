@@ -26,12 +26,6 @@ const PAIN_POINTS = [
   {
     id: 3,
     image: null,
-    icon: Theater,
-    text: "Meetings lack honesty.",
-  },
-  {
-    id: 4,
-    image: null,
     icon: ShieldOff,
     text: "Trust is thinning.",
   },
