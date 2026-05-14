@@ -62,7 +62,7 @@ export default function ContactSection() {
       });
     } catch (err) {
       toast.error("Something went wrong while sending your request.", {
-        description: "Please try again in a moment, or write to hello@trustbridgecounsel.com.",
+        description: "Please try again in a moment, or write to pinky@trustbridgecounsel.in.",
       });
     } finally {
       setSubmitting(false);
