@@ -13,19 +13,19 @@ import { MessageSquareWarning, ThumbsDown, Theater, Presentation, CalendarClock,
 const PAIN_POINTS = [
   {
     id: 1,
-    image: null,
+    image: "/images/corporate/gap.png",
     icon: MessageSquareWarning,
     text: "Communication gaps.",
   },
   {
     id: 2,
-    image: null,
+    image: "/images/corporate/critism.png",
     icon: ThumbsDown,
     text: "Input lands as criticism.",
   },
   {
     id: 3,
-    image: null,
+    image: "/images/corporate/trust.png",
     icon: ShieldOff,
     text: "Trust is thinning.",
   },
@@ -82,8 +82,8 @@ function PainPointCard({ item }) {
         </div>
 
         {/* Icon - positioned half on image */}
-        <div className="absolute left-1/2 -translate-x-1/2 -bottom-5 w-11 h-11 rounded-full bg-ivory border-2 border-gold shadow-md flex items-center justify-center">
-          <Icon size={18} strokeWidth={2} className="text-gold" />
+        <div className="absolute left-1/2 -translate-x-1/2 -bottom-6 w-14 h-14 rounded-full bg-ivory border-2 border-gold shadow-md flex items-center justify-center">
+          <Icon size={24} strokeWidth={2} className="text-gold" />
         </div>
       </div>
 
@@ -165,9 +165,9 @@ export default function CorporateServices() {
         <div className="mb-10 md:mb-14">
           {/* Header row - reversed layout */}
           <div className="grid lg:grid-cols-10 gap-10 lg:gap-16 items-start mb-12 md:mb-16">
-            {/* Left: 3 Pain Point Cards - same col-span as Couples (7), but 3 images with more width */}
+            {/* Left: 3 Pain Point Cards - same col-span as Couples (7), with 3 images in grid */}
             <div className="lg:col-span-7 lg:order-1">
-              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
                 {PAIN_POINTS.map((item) => (
                   <PainPointCard key={item.id} item={item} />
                 ))}

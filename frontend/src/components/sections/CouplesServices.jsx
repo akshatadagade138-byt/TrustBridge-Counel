@@ -23,7 +23,7 @@ const PAIN_POINTS = [
   },
   {
     id: 3,
-    image: "/images/couple/Cimage3.webp",
+    image: "/images/couple/Cimage3.png",
     icon: Building2,
     text: "Worried about family impact.",
   },

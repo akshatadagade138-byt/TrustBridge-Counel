@@ -1,10 +1,10 @@
-import { Clock, Target, Users2, Compass, CheckCircle } from "lucide-react";
+import { Clock, Users2, Compass, CheckCircle } from "lucide-react";
 
 /**
  * Business & Leadership Services Section — Home page only
  *
  * Two parts:
- * 1. Pain points grid with 3 images + icons + descriptions
+ * 1. Pain points grid with 2 images + icons + descriptions
  * 2. Services cards (2 offerings)
  *
  * Layout: Heading on LEFT, Images on RIGHT (same as Couples)
@@ -13,19 +13,13 @@ import { Clock, Target, Users2, Compass, CheckCircle } from "lucide-react";
 const PAIN_POINTS = [
   {
     id: 1,
-    image: null,
+    image: "/images/business/pending.png",
     icon: Clock,
     text: "Decisions delayed.",
   },
   {
     id: 2,
-    image: null,
-    icon: Target,
-    text: "Execution lacks clarity.",
-  },
-  {
-    id: 3,
-    image: null,
+    image: "/images/business/alignment.png",
     icon: Users2,
     text: "Alignment breaking down.",
   },
@@ -72,13 +66,13 @@ function PainPointCard({ item }) {
         </div>
 
         {/* Icon - positioned half on image */}
-        <div className="absolute left-1/2 -translate-x-1/2 -bottom-5 w-11 h-11 rounded-full bg-ivory border-2 border-gold shadow-md flex items-center justify-center">
-          <Icon size={18} strokeWidth={2} className="text-gold" />
+        <div className="absolute left-1/2 -translate-x-1/2 -bottom-7 w-16 h-16 rounded-full bg-ivory border-2 border-gold shadow-md flex items-center justify-center">
+          <Icon size={28} strokeWidth={2} className="text-gold" />
         </div>
       </div>
 
       {/* Text */}
-      <p className="text-walnut/85 text-sm leading-relaxed font-light max-w-[160px]">
+      <p className="text-walnut/85 text-base leading-relaxed font-light max-w-[220px]">
         {item.text}
       </p>
     </div>
@@ -164,9 +158,9 @@ export default function BusinessServices() {
               </p>
             </div>
 
-            {/* Right: 3 Pain Point Cards - larger images */}
+            {/* Right: 2 Pain Point Cards - larger images */}
             <div className="lg:col-span-3">
-              <div className="grid grid-cols-3 gap-5 md:gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
                 {PAIN_POINTS.map((item) => (
                   <PainPointCard key={item.id} item={item} />
                 ))}
