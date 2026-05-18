@@ -1,0 +1,23 @@
+name: backend
+type: Load Balanced Web Service
+
+image:
+  build: backend/Dockerfile
+  port: 8001
+
+http:
+  path: '/'
+  healthcheck: '/api/'
+
+cpu: 256
+memory: 512
+count: 1
+platform: linux/x86_64
+exec: true
+
+variables:
+  CORS_ORIGINS: https://trustbridgecounsel.in,https://www.trustbridgecounsel.in
+  PORT: 8001
+
+secrets:
+  GOOGLE_SHEETS_WEBHOOK_URL: /copilot/${COPILOT_APPLICATION_NAME}/${COPILOT_ENVIRONMENT_NAME}/secrets/GOOGLE_SHEETS_WEBHOOK_URL

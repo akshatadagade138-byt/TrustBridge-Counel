@@ -6,7 +6,7 @@ The frontend and backend are containerized separately:
 
 - Frontend: `frontend/Dockerfile` builds the React app and serves it with Nginx.
 - Backend: `backend/Dockerfile` runs the FastAPI app with Uvicorn.
-- Local full stack: `docker-compose.yml` runs frontend, backend, and MongoDB.
+- Local full stack: `docker-compose.yml` runs frontend and backend.
 
 ### Run Locally With Docker Compose
 
@@ -41,8 +41,6 @@ docker build -t trustbridge-backend ./backend
 Backend:
 
 ```bash
-MONGO_URL=mongodb://your-mongo-host:27017
-DB_NAME=trustbridge
 CORS_ORIGINS=https://your-frontend-domain.com
 GOOGLE_SHEETS_WEBHOOK_URL=
 ```

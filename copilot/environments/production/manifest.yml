@@ -1,0 +1,6 @@
+name: production
+type: Environment
+
+http:
+  public:
+    certificates: []
