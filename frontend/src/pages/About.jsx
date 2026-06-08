@@ -146,9 +146,9 @@ export default function About() {
         />
 
         <div className="relative max-w-[1200px] mx-auto px-6 lg:px-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Portrait */}
-            <div className="flex justify-center lg:justify-end order-1 lg:order-2 lg:mt-56">
+            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
               <div className="relative w-full max-w-[520px] aspect-[4/5]">
                 <div
                   aria-hidden
