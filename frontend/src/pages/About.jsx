@@ -146,38 +146,53 @@ export default function About() {
         />
 
         <div className="relative max-w-[1200px] mx-auto px-6 lg:px-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Portrait */}
-            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-              <div className="relative w-full max-w-[520px] aspect-[4/5]">
-                <div
-                  aria-hidden
-                  className="absolute -top-8 -right-8 w-[70%] h-[70%] rounded-full blur-3xl opacity-50"
-                  style={{
-                    background:
-                      "radial-gradient(closest-side, rgba(176,141,87,0.5), transparent)",
-                  }}
+          {/* Mobile: Heading + Name */}
+          <div className="lg:hidden text-center mb-8">
+            <h2 className="font-serif font-light text-espresso text-[36px] md:text-[52px] leading-[1.05] tracking-[-0.02em]">
+              Meet the Founder
+            </h2>
+            <p className="mt-2 font-serif italic text-walnut text-[28px] md:text-[36px]">
+              Pinkey B.
+            </p>
+          </div>
+
+          {/* Mobile: Image */}
+          <div className="lg:hidden flex justify-center mb-12">
+            <div className="relative w-full max-w-[520px] aspect-[4/5]">
+              <div
+                aria-hidden
+                className="absolute -top-8 -right-8 w-[70%] h-[70%] rounded-full blur-3xl opacity-50"
+                style={{
+                  background:
+                    "radial-gradient(closest-side, rgba(176,141,87,0.5), transparent)",
+                }}
+              />
+              <div className="relative rounded-[32px] overflow-hidden border-2 border-sand/40 shadow-[0_40px_80px_-30px_rgba(59,42,36,0.3)]">
+                <img
+                  src={FOUNDER_IMAGE}
+                  alt="Pinkey B. — Founder, TrustBridge Counsel"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
                 />
-                <div className="relative rounded-[32px] overflow-hidden border-2 border-sand/40 shadow-[0_40px_80px_-30px_rgba(59,42,36,0.3)]">
-                  <img
-                    src={FOUNDER_IMAGE}
-                    alt="Pinkey B. — Founder, TrustBridge Counsel"
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
               </div>
             </div>
+          </div>
 
+          {/* Desktop: Grid Layout */}
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Founder Content */}
-            <div className="order-2 lg:order-1">
-              <h2 className="font-serif font-light text-espresso text-[36px] md:text-[52px] leading-[1.05] tracking-[-0.02em]">
-                Meet the Founder
-              </h2>
-              <p className="mt-2 font-serif italic text-walnut text-[28px] md:text-[36px]">
-                Pinkey B.
-              </p>
+            <div>
+              {/* Desktop: Heading + Name */}
+              <div className="hidden lg:block">
+                <h2 className="font-serif font-light text-espresso text-[36px] md:text-[52px] leading-[1.05] tracking-[-0.02em]">
+                  Meet the Founder
+                </h2>
+                <p className="mt-2 font-serif italic text-walnut text-[28px] md:text-[36px]">
+                  Pinkey B.
+                </p>
+              </div>
 
+              {/* Bio Content (visible on both mobile and desktop) */}
               <div className="mt-8 space-y-5 text-ink/85 text-[15px] md:text-[16px] font-light leading-[1.85]">
                 <p>
                   The 15+ years of cumulative experience from working for MNC to handling business
@@ -207,12 +222,34 @@ export default function About() {
                 <span className="px-4 py-2 rounded-full bg-espresso/10 text-espresso text-xs font-medium">B.B.M.</span>
                 <span className="px-4 py-2 rounded-full bg-espresso/10 text-espresso text-xs font-medium">PG · HRM</span>
                 <span className="px-4 py-2 rounded-full bg-espresso/10 text-espresso text-xs font-medium">LL.B.</span>
-                <span className="px-4 py-2 rounded-full bg-transparent border border-espresso/20 text-espresso/50 text-xs font-light italic">Mediation (in process)</span>
+                <span className="px-4 py-2 rounded-full bg-espresso/10 text-espresso text-xs font-medium">Mediation</span>
               </div>
 
               <p className="mt-8 font-serif italic text-walnut/80 text-lg">
                 "If that resonates, we are here to help."
               </p>
+            </div>
+
+            {/* Desktop: Portrait */}
+            <div className="hidden lg:flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-[520px] aspect-[4/5]">
+                <div
+                  aria-hidden
+                  className="absolute -top-8 -right-8 w-[70%] h-[70%] rounded-full blur-3xl opacity-50"
+                  style={{
+                    background:
+                      "radial-gradient(closest-side, rgba(176,141,87,0.5), transparent)",
+                  }}
+                />
+                <div className="relative rounded-[32px] overflow-hidden border-2 border-sand/40 shadow-[0_40px_80px_-30px_rgba(59,42,36,0.3)]">
+                  <img
+                    src={FOUNDER_IMAGE}
+                    alt="Pinkey B. — Founder, TrustBridge Counsel"
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
